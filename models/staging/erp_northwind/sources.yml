@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: erp
+    schema: erp_northwind
+    tables:
+      - name: orders
+      - name: products
+      - name: suppliers
+      - name: categories
+
+  - name: stripe
+    tables:
+      - name: payments
