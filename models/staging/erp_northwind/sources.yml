@@ -2,6 +2,7 @@ version: 2
 
 sources:
   - name: erp
+<<<<<<< HEAD
     schema: erp_northwind
     tables:
       - name: orders
@@ -12,3 +13,37 @@ sources:
   - name: stripe
     tables:
       - name: payments
+=======
+    description: Banco réplica do erp da northwind.
+    schema: erp_northwind
+    tables:
+      - name: orders
+        description: Uma linha por pedido. Inclui pedidos cancelados e deletados.
+        columns:
+          - name: order_id
+            description: Chave primária da tabela de ordens.
+            tests:
+              - unique
+              - not_null
+      
+      - name: order_details
+        description: Detalhe de item linha para cada pedido da tabela ordens.
+      
+      - name: products
+        description: Tabela com os produtos comercializados pela Northwind.
+
+      - name: categories
+        description: Tabela com as categorias dos produtos comercializados pela Northwind.
+
+      - name: suppliers
+        description: Fornecedores dos produtos comercializados pela Northwind.
+
+      - name: employees
+        description: Tabela com informações dos funcionários da Northwind e seus gerentes.
+
+      - name: shippers
+        description: Transportadoras utilizadas na realização das entregas dos pedidos fechados.
+
+      - name: customers
+        description: Tabela com informações dos clientes da Northwind.
+>>>>>>> e33304deede8814703167c7f809bedf8a9d6d2e9
